@@ -5,27 +5,27 @@
 # Run this script with:
 $ curl -L git.io/sublimetext | sh
 
-# Detect the architecture
-if [ "$(uname -s)" == "Darwin" ]; then
-    URL="http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203065.dmg"
-else
-    exit;
-fi
+# # Detect the architecture
+# if [ "$(uname -s)" == "Darwin" ]; then
+#     URL="http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203065.dmg"
+# else
+#     exit;
+# fi
 
-# # Download the dmg, mount and install
-curl -o ~/st3.dmg $URL
+# # # Download the dmg, mount and install
+# curl -o ~/st3.dmg $URL
 
-mountpoint="/Volumes/Sublime Text"
-IFS="
-"
-hdiutil attach -mountpoint $mountpoint ~/st3.dmg
+# mountpoint="/Volumes/Sublime Text"
+# IFS="
+# "
+# hdiutil attach -mountpoint $mountpoint ~/st3.dmg
 
-for app in `find $mountpoint -type d -maxdepth 2 -name \*.app `; do
-  cp -a "$app" /Applications/
-done
+# for app in `find $mountpoint -type d -maxdepth 2 -name \*.app `; do
+#   cp -a "$app" /Applications/
+# done
 
-hdiutil detach $mountpoint
-rm ~/st3.dmg
+# hdiutil detach $mountpoint
+# rm ~/st3.dmg
 
 # # Symlink config
 st3=~/Library/'Application Support'/'Sublime Text 3'
