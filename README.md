@@ -5,7 +5,7 @@
 Run this:
 
 ```sh
-git clone https://github.com/mshick/dotfiles.git ~/.dotfiles
+git clone https://github.com/maxlever/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
